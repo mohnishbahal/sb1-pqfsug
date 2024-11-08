@@ -1,0 +1,94 @@
+Prompt Reference for CX Compass
+
+1. General Guidelines
+- Ensure all components are responsive and accessible for both mobile and desktop.
+- Follow the current design language of CX Compass: clean, modern, with proper spacing and color alignment.
+- Use meaningful toast notifications for all user actions (e.g., success, error).
+- Maintain consistent state management across components using context or localStorage.
+- Provide error handling for API calls and inline validation for forms.
+
+2. Core Features
+
+Persona Management
+
+Create Persona:
+- Multi-step form with tabs: Demographics, Shopping, Engagement, Journeys, Review.
+- Validate each step before allowing users to proceed.
+- Save data in localStorage or API on the "Save Persona" button.
+- Allow real-time preview of persona details on the "Review" tab.
+- Include an image upload option with a preview for the persona's avatar.
+
+Edit Persona:
+- Add an "Edit" button on the Persona Dashboard for each persona card.
+- Populate the form fields with saved data.
+- Allow users to update fields and save changes.
+
+Persona Dashboard:
+- Display a list of all personas with key details like Name, Age Range, and Shopping Frequency.
+- Add action buttons: Edit, Duplicate, Archive.
+- Include a search and filter feature.
+
+Journeys
+
+Create Journey:
+- Multi-step form with tabs: Journey Name, Stages, Metrics, Review.
+- Validate each step.
+- Allow users to define custom stages and assign personas to each journey.
+- Show a real-time preview of the journey timeline on the "Review" tab.
+
+Journey Dashboard:
+- Display a list of all journeys with details like Completion Rate and Active Personas.
+- Add action buttons: Edit, Duplicate, Archive.
+- Include a filter by persona or date.
+
+3. Component Rules
+
+Form Components:
+- Input fields, dropdowns, and toggles must have tooltips and placeholders.
+- Use consistent styling for error messages.
+
+Cards:
+- Include hover effects and actions (e.g., Edit, Delete).
+- Display essential metrics and a preview image.
+
+Tabs:
+- Highlight the active tab.
+- Show a completion status for each tab.
+
+4. Example Prompts
+
+Save and Edit Persona:
+1. Save Persona:
+   - Validate all form fields when "Save Persona" is clicked.
+   - Collect data from all tabs and save to localStorage.
+   - Show success toast: "Persona saved successfully."
+   - Redirect to Persona Management dashboard.
+
+2. Edit Persona:
+   - On "Edit" click, prepopulate the form fields with persona data.
+   - Allow updates and save changes to the same persona.
+   - Show success toast: "Persona updated successfully."
+
+Create New Journey:
+1. Create a multi-step form for journeys:
+   - Tabs: Name, Stages, Metrics, Review.
+   - Validate each tab before proceeding to the next.
+   - Show a real-time preview of the journey timeline on the "Review" tab.
+2. Save Journey:
+   - Save journey details in localStorage or API on "Save Journey" button.
+   - Show a success toast and redirect to Journey Dashboard.
+
+5. Error Handling
+- For API errors, show a notification with the error message.
+- Highlight invalid fields with a red border and error text.
+- Disable form navigation buttons if validation fails.
+
+6. Navigation
+Sidebar should:
+- Highlight the current section.
+- Smoothly scroll to the active tab or page.
+
+Mobile view:
+- Show a collapsible menu for navigation.
+
+This file serves as a blueprint for your prompts in Bolt.new and ensures all changes remain consistent across the project.
